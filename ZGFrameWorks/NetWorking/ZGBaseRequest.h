@@ -7,7 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AFNetworking.h"
+
+typedef  NS_ENUM(NSInteger, ZGRequestMethod) {
+    ZGRequestMethodGet =0,
+    ZGRequestMethodPost,
+    ZGRequestMethodHead,
+    ZGRequestMethodPut,
+    ZGRequestMethodDelete,
+    ZGRequestMethodPatch
+};
+
+typedef NS_ENUM(NSInteger, ZGRequestSerializerType){
+    ZGRequestSerializerTypeHTTP=0,
+    ZGRequestSerializerTypeJSON,
+};
 
 @interface ZGBaseRequest : NSObject
+
+
 
 @end
