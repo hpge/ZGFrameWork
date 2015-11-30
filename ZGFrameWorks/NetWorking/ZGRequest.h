@@ -14,7 +14,6 @@
 // 返回当前缓存的对象
 - (id) cacheJson;
 
-
 // 是否当前的数据从缓存获得
 - (BOOL)isDataFromCache;
 

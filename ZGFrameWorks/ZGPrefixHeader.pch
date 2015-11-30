@@ -15,8 +15,20 @@
 #endif /* ZGPrefixHeader_pch */
 
 #import "CommonMacro.h"
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #ifdef DEBUG_LOG
+
+
+
+#define YTKLog(format, ...) do {\
+va_list argptr;      \
+va_start(argptr, format);\
+NSLogv(format, argptr);\
+va_end(argptr); \
+}while(0)
+
 #  define LOG(fmt, ...) do {                                            \
 NSString* file = [[NSString alloc] initWithFormat:@"%s", __FILE__]; \
 NSLog((@"%@(%d) " fmt), [file lastPathComponent], __LINE__, ##__VA_ARGS__); \

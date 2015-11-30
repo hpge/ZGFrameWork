@@ -9,14 +9,15 @@
 #ifndef CommonMacro_h
 #define CommonMacro_h
 
-//void YTKLog(NSString *format, ...) {
-//#ifdef DEBUG
-//    va_list argptr;
-//    va_start(argptr, format);
-//    NSLogv(format, argptr);
-//    va_end(argptr);
-//#endif
-//}
+#define YTKLog(format, ...) do {\
+   va_list argptr;      \
+   va_start(argptr, format);\
+   NSLogv(format, argptr);\
+    va_end(argptr); \
+}while(0)
+
+#define COMMON_FS_FILE @"common.xml"
+
 
 #define DEBUG_LOG
 
